@@ -79,7 +79,7 @@ function subirFormulario(evento) {
   ej formDataAlumnos.get("año") */
   console.log(formDataAlumnos.get("nota1"));
 
-  /* guardamos en las variables (que estaban vacias) toda la info obtenida de los inputs */
+  /* guardamos en las variables que estaban vacias toda la info obtenida de los inputs */
   cicloLectivo = formDataAlumnos.get("año");
   materia = formDataAlumnos.get("materia");
   matricula = formDataAlumnos.get("matricula");
@@ -169,17 +169,17 @@ function agregarFila(bodyMateria) {
 function imprimirEstadisticas() {
 	let estadisticas = document.getElementById("texto-estadisticas");
 	let fullText = `
-				<p>Total de alumnos del ciclo lectivo actual: ${matriculas} </p>
-        <p>Total de alumnos por materia del ciclo lectivo actual.</p>
+				<p>Cantidad de alumnos del ciclo lectivo actual: ${matriculas} </p>
+        <p>Cantidad de alumnos por materia del ciclo actual.</p>
 				<p>Matematicas: ${aprobadosMatematicas + desaprobadosMatematicas}</p>
         <p>Programacion: ${aprobadosProgramacion + desaprobadosProgramacion}</p>
-				<p>Total de aprobados por materia.</p>
+				<p>Cantidad de aprobados por materia.</p>
 				<p>Matematicas: ${aprobadosMatematicas}</p>
 				<p>Programacion: ${aprobadosProgramacion}</p>
-        <p>Total de desaprobados por materia.</p>
+        <p>Cantidad de desaprobados por materia.</p>
 				<p>Matematicas: ${desaprobadosMatematicas}</p>
 				<p>Programacion: ${desaprobadosProgramacion}</p>
-				<p>Total de promocionados por materia.</p>
+				<p>Cantidad de promocionados por materia.</p>
         <p>Matematicas: ${promocionMatematicas}</p>
 				<p>Programacion: ${promocionProgramacion}</p>
 	`

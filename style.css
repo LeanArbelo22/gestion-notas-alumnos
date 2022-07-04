@@ -1,0 +1,104 @@
+/* estilos generales */
+body, html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* por lo general algunos elementos html tienen padding o margin por defecto, por eso se los saco desde la raiz del documento, y en caso de que necesiten se lo agrego yo */
+    margin: 0;
+    padding: 0;
+}
+/* las medidas vw y vh hacen referencia al tamaño actual de la pantalla (viewport), 100 view-width(vw)/ view-height(vh) es el 100% de la pantalla en la que se esta viendo la pagina, sin hacer scroll */
+.menu {
+    height: 100vh;
+    /* flex es una forma de organizar los elementos hijos de un contenedor, si no te lo explicaron ya, esta es una de las formas mas comunes de hacer una columna centrada, igual es algo que se aprende con mas practica que otra cosa, te recomiendo que busques flexboxfroggy que es un juego que te enseña a usarlo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* las anclas siempre vienen con decoracion por defecto, el subrayado y el color de enlace, aca lo que hice fue transformarlas en "botones" y quitarles su estilo por defecto */
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    padding: 10px 15px;
+    margin-top: 15px;
+    /*   grosor-estilo-color de borde */
+    border: 1px solid #000;
+    /* para hacer las esquinas curvas */
+    border-radius: 15px;
+}
+/* como a formulario le puse un id en vez de clase uso #.
+Y como el height tambien es de 100vh quiere decir que si bajas hay una "segunda" pantalla ocupada por todo el contenedor formulario */
+#formulario {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form select {
+    margin-bottom: 20px;
+}
+
+form input {
+    margin-bottom: 20px;
+    width: 200px;
+}
+/* los botones tambien traen estilos por defecto, aca lo deje un poquitin mas presentable */
+form button {
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #c0f1fd;
+    padding: 5px 10px;
+    /* para que se vea la manito con el cursor en vez de la flecha */
+    cursor: pointer;
+}
+/* tercer "pantalla" con la tabla, en este caso, el minimo de alto es una pantalla, por si el listado se hace mas largo, ocupe mas lugar hacia abajo  */
+#listado {
+    min-height: 100vh;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*  estilos de la tabla, las filas, las celdas y las cabeceras de la tabla */
+table {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    border: 1px solid #000;
+    border-collapse: collapse; /* no estoy seguro para que es, pero sin esto no podes ponerle bordes a lo que esta dentro de la tabla */
+}
+
+thead {
+    font-size: 16px;
+}
+
+tr {
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+}
+
+td {
+    font-size: 14px;
+}
+
+th, td {
+  border-right: 1px solid #000;
+  padding: 5px;
+  text-align: center;
+}
+
+/* ultima pagina, estadisticas */
+#estadisticas {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

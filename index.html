@@ -10,19 +10,15 @@
   <body>
     <div class="menu">
       <h1>Gestion de notas</h1>
-      <!-- cuando el href del ancla empieza con # es un enlace interno (ubica el id(#) en el mismo archivo html) -->
       <a href="#formulario">Cargar informacion</a>
-      <!-- cuando presione esta ancla va a moverse hacia la etiqueta html que contenga el id 'formulario' -->
       <a href="#listado">Listado</a>
       <a href="#estadisticas">Estadisticas</a>
     </div>
     <div id="formulario">
       <h3>Cargar informacion</h3>
       <form id="form-alumnos">
-        <!-- para vincular un label con un input es necesario que el atributo for del label coincida con el id del input, para que el valor del input se pueda guardar es necesario el atributo name, que por convencion tiene que ser igual al id (no obligatorio) -->
         <label for="año">Ciclo lectivo</label>
         <select name="año" id="año">
-          <!-- en las etiquetas select, value es lo que se envia en el formulario -->
           <option value="2022">2022</option>
         </select>
         <label for="materia">Materia</label>
@@ -31,24 +27,20 @@
           <option value="Programacion">Programacion</option>
         </select>
         <label for="matricula">Matricula</label>
-        <!-- el atributo required hace obligatorio que se deba ingresar informacion en el input -->
         <input type="number" name="matricula" id="matricula" required />
         <label for="nombre">Nombre y Apellido</label>
         <input type="text" name="nombre" id="nombre" required />
         <label for="nota1">Nota parcial 1</label>
-        <!-- el atributo max en los input type number es el valor maximo que puede ingresarse en el input -->
         <input type="number" name="nota1" id="nota1" min="1" max="10" required />
         <label for="nota2">Nota parcial 2</label>
         <input type="number" name="nota2" id="nota2" min="1" max="10" required />
         <label for="nota3">Nota trabajo practico</label>
         <input type="number" name="nota3" id="nota3" min="1" max="10" required />
-        <!-- el button o input type submit (funcionan igual) es el que envia la info del formulario, es necesario que sea de ese tipo -->
         <button type="submit">Cargar</button>
       </form>
     </div>
     <div id="listado">
       <h3>Listado de alumnos</h3>
-      <!-- para entender bien esto tenes que estudiar la estructura de las tablas en html -->
       <table id="tabla-alumnos">
         <thead>
           <tr>
@@ -69,7 +61,7 @@
           </tr>
         </thead>
         <tbody id="mates">
-            
+      
         </tbody>
         <thead>
             <tr>

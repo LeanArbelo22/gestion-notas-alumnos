@@ -1,20 +1,17 @@
 /* estilos generales */
 body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* por lo general algunos elementos html tienen padding o margin por defecto, por eso se los saco desde la raiz del documento, y en caso de que necesiten se lo agrego yo */
     margin: 0;
     padding: 0;
 }
-/* las medidas vw y vh hacen referencia al tamaño actual de la pantalla (viewport), 100 view-width(vw)/ view-height(vh) es el 100% de la pantalla en la que se esta viendo la pagina, sin hacer scroll */
 .menu {
     height: 100vh;
-    /* flex es una forma de organizar los elementos hijos de un contenedor, si no te lo explicaron ya, esta es una de las formas mas comunes de hacer una columna centrada, igual es algo que se aprende con mas practica que otra cosa, te recomiendo que busques flexboxfroggy que es un juego que te enseña a usarlo */
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-/* las anclas siempre vienen con decoracion por defecto, el subrayado y el color de enlace, aca lo que hice fue transformarlas en "botones" y quitarles su estilo por defecto */
 a {
     text-decoration: none;
     color: #000;
@@ -26,8 +23,6 @@ a {
     /* para hacer las esquinas curvas */
     border-radius: 15px;
 }
-/* como a formulario le puse un id en vez de clase uso #.
-Y como el height tambien es de 100vh quiere decir que si bajas hay una "segunda" pantalla ocupada por todo el contenedor formulario */
 #formulario {
     height: 100vh;
     display: flex;
